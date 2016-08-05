@@ -9,4 +9,5 @@ public class SwankyAwesomeJavaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SwankyAwesomeJavaApplication.class, args);
 	}
+
 }
