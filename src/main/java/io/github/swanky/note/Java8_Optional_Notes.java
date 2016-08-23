@@ -6,9 +6,10 @@ import java.util.Set;
 
 /**
  * Java 8 Optional Notes.
+ * 
  * <ol>
  * <li>Optional should only be used for return types</li>
- * <li>Don't call get() without checking the value is present</li>
+ * <li>Don't call <code>get()</code> without checking the value is present</li>
  * </ol>
  * 
  * @see <a href=
@@ -30,7 +31,7 @@ public class Java8_Optional_Notes {
 	 * <li><code>isPresent()</code> + lambda</li>
 	 * </ol>
 	 */
-	void note1() {
+	public void note1() {
 		Optional<String> _text = Optional.of("data");
 		Set<String> textSet = new HashSet<>();
 
@@ -53,7 +54,7 @@ public class Java8_Optional_Notes {
 	 * <li><code>orElseGet()</code> + methodRef</li>
 	 * </ol>
 	 */
-	void note2() {
+	public void note2() {
 		Optional<String> _text = Optional.of("data");
 		Set<String> textSet = new HashSet<>();
 
