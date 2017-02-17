@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: swanky-awesome-java
-Implementation-Version: 2016-08-05
+Implementation-Version: 2017-02-17
 Built-By: ychsiao
 Implementation-Vendor-Id: io.github.swanky
-Build-Jdk: 1.8.0_101
+Build-Jdk: 1.8.0_121
 Implementation-URL: http://projects.spring.io/spring-boot/swanky-aweso
  me-java/
 Created-By: Maven Integration for Eclipse

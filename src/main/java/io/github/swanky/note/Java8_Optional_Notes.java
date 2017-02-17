@@ -22,61 +22,61 @@ import java.util.Set;
  * @author swanky
  */
 public class Java8_Optional_Notes {
-
-	/**
-	 * 1. Look for the most elegant solution: if.
-	 * 
-	 * <ol>
-	 * <li><code>isPresent()</code> + <code>get()</code></li>
-	 * <li><code>isPresent()</code> + lambda</li>
-	 * </ol>
-	 */
-	public void note1() {
-		Optional<String> _text = Optional.of("data");
-		Set<String> textSet = new HashSet<>();
-
-		// 1.1. isPresent() + get()
-		if (_text.isPresent()) {
-			textSet.add(_text.get());
-		}
-
-		// 1.2. ifPresent() + lambda
-		_text.ifPresent(text -> textSet.add(text));
-	}
-
-	/**
-	 * 2. Look for the most elegant solution: if else.
-	 * 
-	 * <ol>
-	 * <li><code>isPresent()</code> + <code>get()</code> + else</li>
-	 * <li><code>orElse()</code></li>
-	 * <li><code>orElseGet()</code> + lambda</li>
-	 * <li><code>orElseGet()</code> + methodRef</li>
-	 * </ol>
-	 */
-	public void note2() {
-		Optional<String> _text = Optional.of("data");
-		Set<String> textSet = new HashSet<>();
-
-		// 2.1. isPresent() + get() + else
-		if (_text.isPresent()) {
-			textSet.add(_text.get());
-		} else {
-			textSet.add("no_data");
-		}
-
-		// 2.2. orElse()
-		textSet.add(_text.orElse("no_data"));
-
-		// 2.3. orElseGet() + lambda
-		textSet.add(_text.orElseGet(() -> "no_data"));
-
-		// 2.4. orElseGet() + methodRef
-		textSet.add(_text.orElseGet(this::noData));
-	}
-
-	String noData() {
-		return "no_data";
-	}
-
+  
+  /**
+   * 1. Look for the most elegant solution: if.
+   * 
+   * <ol>
+   * <li><code>isPresent()</code> + <code>get()</code></li>
+   * <li><code>isPresent()</code> + lambda</li>
+   * </ol>
+   */
+  public void note1() {
+    Optional<String> _text = Optional.of("data");
+    Set<String> textSet = new HashSet<>();
+    
+    // 1.1. isPresent() + get()
+    if (_text.isPresent()) {
+      textSet.add(_text.get());
+    }
+    
+    // 1.2. ifPresent() + lambda
+    _text.ifPresent(text -> textSet.add(text));
+  }
+  
+  /**
+   * 2. Look for the most elegant solution: if else.
+   * 
+   * <ol>
+   * <li><code>isPresent()</code> + <code>get()</code> + else</li>
+   * <li><code>orElse()</code></li>
+   * <li><code>orElseGet()</code> + lambda</li>
+   * <li><code>orElseGet()</code> + methodRef</li>
+   * </ol>
+   */
+  public void note2() {
+    Optional<String> _text = Optional.of("data");
+    Set<String> textSet = new HashSet<>();
+    
+    // 2.1. isPresent() + get() + else
+    if (_text.isPresent()) {
+      textSet.add(_text.get());
+    } else {
+      textSet.add("no_data");
+    }
+    
+    // 2.2. orElse()
+    textSet.add(_text.orElse("no_data"));
+    
+    // 2.3. orElseGet() + lambda
+    textSet.add(_text.orElseGet(() -> "no_data"));
+    
+    // 2.4. orElseGet() + methodRef
+    textSet.add(_text.orElseGet(this::noData));
+  }
+  
+  String noData() {
+    return "no_data";
+  }
+  
 }

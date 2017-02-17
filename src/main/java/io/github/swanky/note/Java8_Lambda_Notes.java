@@ -24,5 +24,5 @@ package io.github.swanky.note;
  * @author swanky
  */
 public class Java8_Lambda_Notes {
-
+  
 }

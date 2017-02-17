@@ -16,14 +16,16 @@ import java.util.stream.IntStream;
  * @author swanky
  */
 public class Java8_Stream_Notes {
-
-	public void note1() {
-		IntStream.range(1, 5).forEach(System.out::println);
-		IntStream.rangeClosed(1, 5).forEach(System.out::println);
-	}
-
-	public static void main(String[] args) {
-		new Java8_Stream_Notes().note1();
-	}
-
+  
+  public void note1() {
+    IntStream.range(1, 5)
+             .forEach(System.out::println);
+    IntStream.rangeClosed(1, 5)
+             .forEach(System.out::println);
+  }
+  
+  public static void main(String[] args) {
+    new Java8_Stream_Notes().note1();
+  }
+  
 }
