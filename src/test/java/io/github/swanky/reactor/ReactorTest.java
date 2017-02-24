@@ -116,9 +116,10 @@ public class ReactorTest {
     TimeUnit.SECONDS.sleep(1L);
   }
   
-  // @Ignore
+  @Ignore
   @Test
   public void test_MonoProcessor() throws Exception {
+    
     TopicProcessor<String> processor = TopicProcessor.<String>create(Executors.newWorkStealingPool());
     
     processor.subscribe(str -> {
@@ -154,7 +155,11 @@ public class ReactorTest {
              });
     
     TimeUnit.SECONDS.sleep(500L);
-    
+  }
+  
+  @Test
+  public void test_t() throws Exception {
+    throw null;
   }
   
 }
